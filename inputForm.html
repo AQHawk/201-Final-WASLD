@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Beachbody Program Finder</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Code Fellows 201 Final">
+      <meta name="description" content="Code Fellows 201 Final ~ Beachbody Program Finder ">
+      <meta name="keywords" content="Code Fellows, Beachbody">
+      <link href="images/favicon.ico" rel="icon" type="image/png">
+      <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Raleway|Roboto|Oswald|Rajdhani" rel="stylesheet">
+      <link rel="stylesheet" href="css/reset.css" type="text/css">
+      <link rel="stylesheet" href="css/grid.css" type="text/css">
+      <link rel="stylesheet" href="css/style.css" type="text/css">
+  </head>
+
+  <body>
+  <!-- header -->
+    <header>
+      <nav>
+
+      </nav>
+    </header>
+
+  <!-- main / form -->
+    <main>
+      <form id="workoutSelection">
+        <fieldset>
+          <legend>Choose Your Workout</legend>
+          <input type="text" name="userName" placeholder="Your Name">
+          <ul>
+            <li><label for="time">Time</label></li>
+            <li><input type="radio" name="time" value="1" required>Less than 30mins</li>
+            <li><input type="radio" name="time" value="2">30 to 40 mins</li>
+            <li><input type="radio" name="time" value="3">More than 45 mins</li>
+          </ul>
+          <ul>
+            <li><label for="intensity">Intensity</label></li>
+            <li><input type="radio" name="intensity" value="1" required>Beginner</li>
+            <li><input type="radio" name="intensity" value="2">Intermediate</li>
+            <li><input type="radio" name="intensity" value="3">Advanced</li>
+            <li><input type="radio" name="intensity" value="4">Extreme</li>
+          </ul>
+          <select id="workoutStyle" name="style" required>
+            <option value="">Select Workout Style</option>
+            <option value="dance">Dance</option>
+            <option value="cardio">Cardio</option>
+            <option value="extreme">Extreme</option>
+            <option value="abs">Abs</option>
+          </select>
+          <button type="submit" name="sendSelection">Submit Info</button>
+        </fieldset>
+      </form>
+    </main>
+
+  <!-- footer -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
