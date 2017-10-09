@@ -13,4 +13,4 @@ function Workouts(name, length, intensity, style){
   this.style = this.style.concat(style);
 }
 
-var workout1 = new Workout(name, [length], intensity, [style]);
+var workout1 = new Workouts(name, [length], intensity, [style]);
