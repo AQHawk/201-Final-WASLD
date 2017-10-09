@@ -1,3 +1,3 @@
 # 201-Final-WASLD
 
-This is a Final project for Code Fellows Course 201.
+This is a Final Project for Code Fellows Course 201.
