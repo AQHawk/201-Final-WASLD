@@ -5,10 +5,10 @@
 // +++++++ Constructor
 // +++++++++++++++++++++++++++++++++++++++++
 function Workouts(name, length, intensity, style){
-  this.name = [];
-  this.length = length;
+  this.name = name;
+  this.length = [];
   this.intensity = intensity;
   this.style = [];
-  this.name = this.name.concat(name);
+  this.length = this.length.concat(length);
   this.style = this.style.concat(style);
 }
