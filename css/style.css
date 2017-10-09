@@ -1,0 +1,173 @@
+/*
+File Name: style.css
+Date: October 2017
+Programmer: Adrian Hawk, Matt LeBlanc, Nick Gibson
+*/
+
+/* MOBILE STYLESHEET */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  background-image: url("http://via.placeholder.com/1920x800");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 50em;
+}
+
+.topbar {
+  background-color: #97d1ed);
+  height: .4em;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+
+.midbar {
+  clear: both;
+  padding: 1em 0;
+  width: 100%;
+  background-color: #111111;
+}
+
+button {
+  color: #97d1ed;
+  font-size: 1.7em;
+  display:block;
+  border: solid 1px #97d1ed;
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient(#111111, #2b4650);
+  padding: .5em 1em .5em;
+  margin: 0 auto;
+}
+
+button:hover {
+  background: linear-gradient(#111111, #327994);
+  color: white;
+  border: solid 1px #f7fcff;
+}
+
+
+.topmenu {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  transition: all 0.5s ease-in-out;
+  text-align: right;
+}
+
+nav {
+  text-align: center;
+  background: linear-gradient(#111111, #2b4650);
+  padding: 2em 0 2em;
+  min-height: 1em;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #97d1ed;
+  font-family: "Raleway", serif;
+
+  font-size: 2em;
+  display: block;
+  margin-right: 4em;
+}
+nav li a.active {
+  color: #fff;
+}
+/* mouse over link */
+a:hover {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* selected link */
+a:active {
+  color: rgb(122, 171, 245);
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+main {
+  background-color: #f5f5f5;
+}
+
+main h1 {
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5em;
+  padding: 1.5em 1em 1.5em 1em;
+  text-align: center;
+  text-shadow: 2px 2px 5px #272727;
+}
+main h2 {
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  text-shadow: 2px 2px 5px #272727;
+}
+
+main h2 {
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  text-shadow: 2px 2px 5px #272727;
+}
+
+main p {
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3em;
+  margin: 0 auto;
+
+}
+
+.clearit {
+  clear: both;
+}
+
+.lbar {
+  background-color: rgb(5, 31, 124);
+  height: .2em;
+  width: 100%;
+}
+
+.centerwrap {
+    max-width: 1120px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    position: relative;
+  }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #fff;
+  margin: 1em auto;
+  padding: 0;
+  width: 8em;
+}
+
+footer {
+  background: linear-gradient(#1d1d1d, #101010);
+}
