@@ -19,19 +19,30 @@ header {
   min-height: 50em;
 }
 
-.topbar {
-  background-color: #97d1ed);
-  height: .4em;
-  position: fixed;
-  width: 100%;
-  z-index: 10000;
-}
-
 .midbar {
   clear: both;
   padding: 1em 0;
   width: 100%;
   background-color: #111111;
+}
+
+.midblock {
+  width: 100%;
+  background-image: url("../img/bbwall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.midblock h1 {
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 6em;
+  padding: .5em 0;
+
+
 }
 
 button {
@@ -136,6 +147,7 @@ main p {
   font-family: 'Lato', sans-serif;
   font-size: 1.3em;
   margin: 0 auto;
+  padding: 0 1em 2em 1em;
 
 }
 
@@ -170,4 +182,5 @@ hr {
 
 footer {
   background: linear-gradient(#1d1d1d, #101010);
+  min-height: 24em;
 }
