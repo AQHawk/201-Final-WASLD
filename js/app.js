@@ -19,7 +19,7 @@ Workouts.prototype.compare = function(){
       Workouts.allWorkouts[i].score++;
     };
     if (Workouts.allWorkouts[i].intensity.includes(parseInt(Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)].intensity))){
-      Workouts.allWorkouts[i].score++;
+      Workouts.allWorkouts[i].score += 2;
     };
     if (Workouts.allWorkouts[i].style.includes(Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)].style)){
       console.log('true for', i);
@@ -60,6 +60,6 @@ var turboJam = new Workouts('Turbo Jam', [1, 2, 3], [3], ['dance', 'tone']);
 var hipHopAbs = new Workouts('Hip Hop Abs', [1, 2], [2], ['dance', 'tone', 'cardio', 'express']);
 var chaLean = new Workouts('ChaLEAN Extreme', [2], [3], ['tone', 'extreme']);
 var rockinBody = new Workouts('Rockin\' Body', [1, 2], [2], ['dance', 'tone']);
-var toTest = new Workouts('User', [2], [2], ['dance']);
+var toTest = new Workouts('User', [2], [2], 'dance');
 
 Workouts.prototype.compare();
