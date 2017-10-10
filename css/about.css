@@ -1,0 +1,135 @@
+/*
+File Name: style.css
+Date: October 2017
+Programmer: Adrian Hawk, Matt LeBlanc, Nick Gibson
+*/
+
+/* MOBILE STYLESHEET */
+
+header {
+  background-image: url("http://via.placeholder.com/1920x800");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 6em;
+}
+
+body{
+  background-color: #f5f5f5;
+}
+
+.topmenu {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  transition: all 0.5s ease-in-out;
+  text-align: right;
+}
+
+nav {
+  background: linear-gradient(#111111, #2b4650);
+  padding: 2em 0 2em;
+  border-bottom: 1px solid #97d1ed;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #97d1ed;
+  font-family: "Raleway", serif;
+  font-size: 2em;
+  display: block;
+  margin-right: 4em;
+}
+
+/* mouse over link */
+.topmenu a:hover {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* selected link */
+.topmenu a:active {
+  color: rgb(122, 171, 245);
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+main {
+  padding-top: 30px;
+  height: 100%;
+  background-color: #f5f5f5;
+  background: linear-gradient(#2b4650, #111);
+}
+
+main article {
+  background-color: white;
+}
+#title {
+  text-align: center;
+}
+
+#title h1 {
+  font-size: 4em;
+  color: white;
+}
+
+#title span {
+  position: relative;
+}
+
+#title span::before,
+#title span::after {
+  content: '';
+  position: absolute;
+  border-top: 1px solid white;
+  top: 50%;
+  width: 200px;
+}
+
+#title span::before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+#title span::after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.about {
+  min-height: 200px;
+  height: auto;
+}
+
+.about h2 {
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 5px #272727;
+  display: block;
+  margin: 0px 0 15px 200px;
+  padding-left: 15px;
+}
+
+.about p {
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3em;
+  display: block;
+  margin-left: 200px;
+  padding-left: 15px;
+  text-indent: 50px;
+}
+
+.about {
+  padding: 10px;
+  border: 5px rgb(5, 31, 124) outset;
+  margin: 70px 10%;
+}
+
+.about img {
+  float: left;
+}
