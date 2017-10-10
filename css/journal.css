@@ -17,6 +17,7 @@ main #entry {
     margin-top: 20px;
     margin-bottom: 20px;
     box-shadow: 2px 2px 10px #060606;
+    width: 90%;
 }
 fieldset {
     border: 4px ridge #adbac7;

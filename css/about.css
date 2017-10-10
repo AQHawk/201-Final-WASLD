@@ -39,7 +39,7 @@ nav ul li a {
   color: #97d1ed;
   font-family: "Raleway", serif;
   font-size: 2em;
-  display: block;
+  display: inline-block;
   margin-right: 4em;
 }
 
