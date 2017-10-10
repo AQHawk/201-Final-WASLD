@@ -8,7 +8,6 @@ Programmer: Adrian Hawk, Matt LeBlanc, Nick Gibson
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 header {
@@ -54,14 +53,20 @@ header {
   z-index: 10000;
   transition: all 0.5s ease-in-out;
   text-align: right;
+  padding: 16px;
+}
+
+.topmenu img{
+  float: left;
+  margin-left: 20px;
+  padding-top: 2px;
 }
 
 nav {
-  text-align: center;
   background: linear-gradient(#111111, #2b4650);
-  padding: 2em 0 2em;
   min-height: 1em;
 }
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -76,8 +81,9 @@ nav ul li a {
   color: #97d1ed;
   font-family: "Raleway", sans-serif;
   font-size: 2em;
-  display: block;
+  display: inline-block;
   margin-right: 4em;
+  padding-top: 15px;
 }
 
 nav ul li a:hover {
