@@ -28,7 +28,7 @@ header {
 
 .midblock {
   width: 100%;
-  background-image: url("../img/bbwall.jpg");
+  background-image: url("../img/gym.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -204,6 +204,7 @@ footer a {
 footer h2 {
   color: white;
   font-size: 1.8em;
+  font-family: 'Lato', sans-serif;
   margin-bottom: .5em;
   padding-right: 1em;
 }
