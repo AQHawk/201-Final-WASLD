@@ -10,7 +10,12 @@ function Workouts(name, length, intensity, style){
   this.intensity = intensity;
   this.style = style;
   Workouts.allWorkouts.push(this);
+  this.score = 0;
 }
+
+Workouts.prototype.compare = function(userobject, workoutobject){
+
+};
 
 // var workout1 = new Workouts(name, [length], intensity, [style]);
 var cleanWeek	= new Workouts('Clean Week', [2], 1, ['none']);
@@ -21,7 +26,7 @@ var coreDeForce	= new Workouts('Core De Force', [2], 3, ['extreme', 'cardio']);
 var countryHeat	= new Workouts('Country Heat', [2], 2, ['dance']);
 var twentyTwoMinute	= new Workouts('22 Minute Hard Corps', [1], 4, ['extreme', 'express']);
 var hammerAndChisel	= new Workouts('The Master\'s Hammer and Chisel', [2], 2, ['cardio', 'extreme']);
-var cize	= new Workouts('CIZE', [2], 2, ['dance']);
+var cize = new Workouts('CIZE', [2], 2, ['dance']);
 var dayFixExtreme	= new Workouts('21 Day Fix EXTREME', [2], 3, ['extreme']);
 var insanityMax	= new Workouts('INSANITY MAX:30', [2], 3, ['extreme']);
 var pNinetyOriginal	= new Workouts('P90', [1, 2], 2, ['express', 'cardio']);
@@ -44,3 +49,4 @@ var turboJam = new Workouts('Turbo Jam', [1, 2, 3], 3, ['dance', 'tone']);
 var hipHopAbs = new Workouts('Hip Hop Abs', [1, 2], 2, ['dance', 'tone', 'cardio', 'express']);
 var chaLean = new Workouts('ChaLEAN Extreme', [2], 3, ['tone', 'extreme']);
 var rockinBody = new Workouts('Rockin\' Body', [1, 2], 2, ['dance', 'tone']);
+var toTest = new Workouts('User', [2], 2, ['dance']);
