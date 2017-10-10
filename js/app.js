@@ -28,6 +28,7 @@ Workouts.prototype.compare = function(){
   }
 };
 
+
 // var workout1 = new Workouts(name, [commitment], intensity, [style]);
 var cleanWeek	= new Workouts('Clean Week', [2], [1], ['none']);
 var shiftShop = new Workouts('Shift Shop', [1, 2], [2], ['cardio', 'express']);
