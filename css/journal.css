@@ -10,6 +10,7 @@ main #subject {
     font-size: 24px;
     height: 24px;
     box-shadow: 4px 4px 16px #060606;
+    padding-left: 5px;
 }
 main #entry {
     display: block;
@@ -30,6 +31,7 @@ fieldset label {
     margin-right: 12px;
     color: #bbccd6;
     text-shadow: 4px 3px 6px #060606;
+    font-family: rajdhani;
 }
 
 fieldset button {
@@ -44,20 +46,19 @@ legend {
     font-size: 40px;
     margin-left: 5%;
     padding: 5px 10px;
+    font-family: lato;
 }
 form {
     margin: 20px 10%;
 }
 .changeBackground {
-/*     background-color: white; */
     background: linear-gradient(#263c44, #2a434c);
     position: absolute;
     right: 5%;
     top: 0px;
     padding: 10
     height: 43px;
-    width: 275.31px;
-/*     padding: 10px; */
+    width: 261.78px;
 }
 #changeWorkout {
     color: #abe7ff;
@@ -65,9 +66,10 @@ form {
     font-size: 20px;
     right: 5%;
     top: 0px;
-    padding: 10px 40px;
+    padding: 10px 30px;
     background: linear-gradient(#7cdbff, #064c63);
-    border: none
+    border: none;
+    font-family: raleway;
 }
 
 button:focus {

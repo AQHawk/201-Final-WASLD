@@ -41,12 +41,11 @@
             <button id="changeWorkout" type="button" name="changeYourWorkout">Change Workout Plan</button>
           </div>
 
-
           <!-- <h5>Journal Entry</h5> -->
           <label for="journalHeader">Subject:</label>
-          <input id="subject" type="text" name="journalSubject" placeholder="Title of the journal">
+          <input id="subject" type="text" name="journalSubject" placeholder="Title of the journal" maxlength="50">
           <textarea id="entry" type="text" name="journalEntryText" placeholder="Write about your workout" cols="100" rows="18"></textarea>
-          <button type="submit" name="button">Submit Entry</button>
+          <button id="submit" type="submit" name="submit">Submit Entry</button>
       </fieldset>
       </form>
 
@@ -60,5 +59,6 @@
     <footer>
 
     </footer>
+    <script src="js/app.js" type="text/javascript"></script>
   </body>
 </html>

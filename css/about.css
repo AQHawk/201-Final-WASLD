@@ -79,6 +79,7 @@ main article {
 #title h1 {
   font-size: 4em;
   color: white;
+  font-family: raleway;
 }
 
 #title span {

@@ -50,3 +50,21 @@ var hipHopAbs = new Workouts('Hip Hop Abs', [1, 2], 2, ['dance', 'tone', 'cardio
 var chaLean = new Workouts('ChaLEAN Extreme', [2], 3, ['tone', 'extreme']);
 var rockinBody = new Workouts('Rockin\' Body', [1, 2], 2, ['dance', 'tone']);
 var toTest = new Workouts('User', [2], 2, ['dance']);
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++ v Matt's Modifications v +++++++++++++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+var journalInput = document.getElementById('journalForm');
+journalInput.addEventListener('submit', submitJournal);
+
+function submitJournal(event) {
+  event.preventDefault();
+
+  var subject = event.target.journalSubject.value;
+  var entryText = event.target.journalEntryText.value;
+  return console.log(entryText);
+}
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++ ^ Matt's Modifications ^ +++++++++++++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
