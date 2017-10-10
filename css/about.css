@@ -65,9 +65,14 @@ main {
 }
 
 main article {
-  background-color: white;
+  background-color: #2b454f;
+  border: 5px outset #115671;
+  margin: 50px 10%;
+  padding: 1px 0;
 }
+
 #title {
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -100,8 +105,13 @@ main article {
 }
 
 .about {
+  background-color: #97d1ed;
   min-height: 200px;
   height: auto;
+  padding: 10px;
+  border: 5px rgb(0, 32, 146) outset;
+  margin: 20px;
+  margin-bottom: 60px;
 }
 
 .about h2 {
@@ -124,12 +134,7 @@ main article {
   text-indent: 50px;
 }
 
-.about {
-  padding: 10px;
-  border: 5px rgb(5, 31, 124) outset;
-  margin: 70px 10%;
-}
-
 .about img {
+  border-radius: 200px;
   float: left;
 }

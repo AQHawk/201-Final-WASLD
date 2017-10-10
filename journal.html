@@ -11,7 +11,8 @@
       <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Raleway|Roboto|Oswald|Rajdhani" rel="stylesheet">
       <link rel="stylesheet" href="css/reset.css" type="text/css">
       <link rel="stylesheet" href="css/grid.css" type="text/css">
-      <link rel="stylesheet" href="css/style.css" type="text/css">
+      <link rel="stylesheet" href="css/about.css" type="text/css">
+      <link rel="stylesheet" href="css/journal.css" type="text/css">
   </head>
 
   <body>
@@ -26,18 +27,26 @@
 
 <!-- main article -->
     <main>
-      <h4>Chosen Workout</h4>
-      <button type="button" name="changeYourWorkout">Change Workout Plan</button>
+      <section id="title">
+        <h1><span>Current Workout Plan</span></h1>
+      </section>
+
+      <!-- <h4>Current Workout Plan</h4> -->
 
 <!-- journal form -->
       <form id="journalForm">
         <fieldset>
-          <legend>Submit A new Journal</legend>
+          <legend>Journal Entry</legend>
+          <div class="changeBackground">
+            <button id="changeWorkout" type="button" name="changeYourWorkout">Change Workout Plan</button>
+          </div>
 
-          <h4>Journal Entry</h4>
-          <label for="journalHeader">Subject</label>
-          <input type="text" name="journalSubject" placeholder="Title of the journal">
-          <input type="text" name="journalEntryText" placeholder="Write about your workout">
+
+          <!-- <h5>Journal Entry</h5> -->
+          <label for="journalHeader">Subject:</label>
+          <input id="subject" type="text" name="journalSubject" placeholder="Title of the journal">
+          <textarea id="entry" type="text" name="journalEntryText" placeholder="Write about your workout" cols="100" rows="18"></textarea>
+          <button type="submit" name="button">Submit Entry</button>
       </fieldset>
       </form>
 

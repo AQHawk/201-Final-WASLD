@@ -1,0 +1,75 @@
+main {
+/*     text-align: center; */
+}
+
+main h4 {
+    color: #97d1e7;
+    font-size: 30px;
+}
+main #subject {
+    font-size: 24px;
+    height: 24px;
+    box-shadow: 4px 4px 16px #060606;
+}
+main #entry {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px #060606;
+}
+fieldset {
+    border: 4px ridge #adbac7;
+/*     margin: 20px 10%; */
+    padding: 50px;
+    padding-left: 60px;
+    background: linear-gradient(#2b454f, #141617);
+    position: relative;
+}
+fieldset label {
+    font-size: 32px;
+    margin-right: 12px;
+    color: #bbccd6;
+    text-shadow: 4px 3px 6px #060606;
+}
+
+fieldset button {
+    border: none;
+    padding: 10px 30px;
+    background: linear-gradient(#7cdbff, #064c63);
+}
+legend {
+    background: linear-gradient(#263c44, #2a434c);
+    color: #4db2ed;
+    text-shadow: 4px 3px 6px #060606;
+    font-size: 40px;
+    margin-left: 5%;
+    padding: 5px 10px;
+}
+form {
+    margin: 20px 10%;
+}
+.changeBackground {
+/*     background-color: white; */
+    background: linear-gradient(#263c44, #2a434c);
+    position: absolute;
+    right: 5%;
+    top: 0px;
+    padding: 10
+    height: 43px;
+    width: 275.31px;
+/*     padding: 10px; */
+}
+#changeWorkout {
+    color: #abe7ff;
+    text-shadow: 2px 1px 4px #131010;
+    font-size: 20px;
+    right: 5%;
+    top: 0px;
+    padding: 10px 40px;
+    background: linear-gradient(#7cdbff, #064c63);
+    border: none
+}
+
+button:focus {
+    outline: 0;
+}
