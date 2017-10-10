@@ -12,11 +12,10 @@ img {
 }
 
 header {
-  background-image: url("http://via.placeholder.com/1920x800");
+  background-image: url("../img/future9.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
-  min-height: 50em;
+  min-height: 47em;
 }
 
 .midbar {
@@ -24,6 +23,7 @@ header {
   padding: 1em 0;
   width: 100%;
   background-color: #111111;
+  text-align: center;
 }
 
 .midblock {
@@ -32,8 +32,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 2.3em;
+  padding-bottom: 2.3em;
 }
 
 .midblock h1 {
@@ -41,27 +41,9 @@ header {
   font-family: 'Oswald', sans-serif;
   font-size: 6em;
   padding: .5em 0;
-
-
 }
 
-button {
-  color: #97d1ed;
-  font-size: 1.7em;
-  display:block;
-  border: solid 1px #97d1ed;
-  border-radius: 30px;
-  text-align: center;
-  background: linear-gradient(#111111, #2b4650);
-  padding: .5em 1em .5em;
-  margin: 0 auto;
-}
 
-button:hover {
-  background: linear-gradient(#111111, #327994);
-  color: white;
-  border: solid 1px #f7fcff;
-}
 
 
 .topmenu {
@@ -92,21 +74,25 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #97d1ed;
-  font-family: "Raleway", serif;
-
+  font-family: "Raleway", sans-serif;
   font-size: 2em;
   display: block;
   margin-right: 4em;
 }
-nav li a.active {
+
+nav ul li a:hover {
   color: #fff;
-}
-/* mouse over link */
-a:hover {
-  color: white;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
 }
+
+
+nav ul li a:active {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /* selected link */
 a:active {
   color: rgb(122, 171, 245);
@@ -121,15 +107,17 @@ main {
 main h1 {
   color: #000;
   font-family: 'Lato', sans-serif;
-  font-size: 2.5em;
-  padding: 1.5em 1em 1.5em 1em;
+  font-size: 3em;
+  padding: 1em 1em .6em 1em;
   text-align: center;
   text-shadow: 2px 2px 5px #272727;
 }
 main h2 {
   color: #000;
   font-family: 'Lato', sans-serif;
+  font-size: 2.1em;
   text-align: center;
+  padding: 0em 1em 1em 1em;
   margin: 0 auto;
   text-shadow: 2px 2px 5px #272727;
 }
@@ -145,12 +133,32 @@ main h2 {
 main p {
   color: #000;
   font-family: 'Lato', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.7em;
   margin: 0 auto;
-  padding: 0 1em 2em 1em;
-
+  padding: 1em 1em 2em 1em;
+  text-align: center;
 }
 
+main a {
+  color: #97d1ed;
+  font-size: 1.7em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  display:inline-block;
+  border: solid 1px #97d1ed;
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient(#111111, #2b4650);
+  padding: .5em 1em .5em;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+main a:hover {
+  background: linear-gradient(#111111, #327994);
+  color: white;
+  border: solid 1px #f7fcff;
+}
 .clearit {
   clear: both;
 }
@@ -174,13 +182,71 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 2px solid #fff;
+  border-top: 1px solid #000;
   margin: 1em auto;
   padding: 0;
-  width: 8em;
+  width: 26em;
 }
 
 footer {
-  background: linear-gradient(#1d1d1d, #101010);
-  min-height: 24em;
+  background: linear-gradient(#111111, #222f41);
+  min-height: 14em;
+  padding-top: 2.5em;
+}
+
+
+footer a {
+  text-decoration: none;
+  color: #97d1ed;
+  font-family: "Raleway", sans-serif;
+}
+
+footer h2 {
+  color: white;
+  font-size: 1.8em;
+  margin-bottom: .5em;
+  padding-right: 1em;
+}
+
+footer h3 {
+  font-size: 1.5em;
+  padding-bottom: 1.2em;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 1em;
+  text-align: center;
+}
+footer ul {
+  padding-right: 1em;
+}
+footer ul li {
+  color: #ffffff;
+}
+
+.cbar {
+  clear: both;
+  padding: 1em 0;
+  width: 100%;
+  background-color: #111111;
+}
+
+.sm-container {
+  width: auto;
+  margin: auto;
+  padding-left: 1.3em;
+}
+.social-media-list {
+  width: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 7em;
+}
+.social-media-list li {
+  display: block;
+  float: left;
+  text-align: center;
+  margin: 0 auto;
+  padding-right: .7em;
 }
