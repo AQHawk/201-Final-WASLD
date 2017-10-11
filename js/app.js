@@ -32,6 +32,7 @@ Workouts.prototype.compare = function(){
 
 //Create the objects; turn user input into last object in allWorkouts array in order to compare it
 Workouts.prototype.userInput = function(event){
+  event.preventDefault();
   var cleanWeek	= new Workouts('Clean Week', [2], [1], ['none']);
   var shiftShop = new Workouts('Shift Shop', [1, 2], [2], ['cardio', 'express']);
   var youVTwo = new Workouts('YOUv2', [2], [1], ['dance', 'tone']);
@@ -72,6 +73,7 @@ Workouts.prototype.userInput = function(event){
   Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)].userName = event.target.userName.value;
   var selectedWorkout = Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)];
   localStorage.workout = JSON.stringify(selectedWorkout);
+  window.location = 'outputForm.html';
 };
 
 workoutSelection.addEventListener('submit', Workouts.prototype.userInput);
