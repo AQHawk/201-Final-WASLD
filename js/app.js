@@ -23,7 +23,6 @@ Workouts.prototype.compare = function(){
       Workouts.allWorkouts[i].score += 2;
     };
     if (Workouts.allWorkouts[i].style.includes(Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)].style)){
-      console.log('true for', i);
       Workouts.allWorkouts[i].score += 5;
     };
   }
@@ -65,6 +64,11 @@ Workouts.prototype.userInput = function(event){
   var rockinBody = new Workouts('Rockin\' Body', [1, 2], [2], ['dance', 'tone']);
   var userWorkout = new Workouts('null', event.target.time.value, event.target.intensity.value, event.target.style.value);
   Workouts.prototype.compare();
+  // Workouts.allWorkouts.pop();
+  Workouts.allWorkouts.sort(function (a, b) {
+    return a.score - b.score;
+  });
+  //Next: Evaluate scores after comparing, put info regarding highest scoring object to localStorage, pass to results page, delete preventDefault above.
 };
 
 workoutSelection.addEventListener('submit', Workouts.prototype.userInput);
