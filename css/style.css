@@ -160,6 +160,36 @@ main a {
   text-decoration: none;
 }
 
+main a {
+  color: #97d1ed;
+  font-size: 1.7em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  display:inline-block;
+  border: solid 1px #97d1ed;
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient(#111111, #2b4650);
+  padding: .5em 1em .5em;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+main button {
+  color: #97d1ed;
+  font-size: 1.7em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  display:inline-block;
+  border: solid 1px #97d1ed;
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient(#111111, #2b4650);
+  padding: .5em 1em .5em;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
 main a:hover {
   background: linear-gradient(#111111, #327994);
   color: white;
