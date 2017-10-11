@@ -18,47 +18,92 @@
   <!-- header -->
     <header>
       <nav class="topmenu">
-        <ul>
-          <li id="navjournal"><a href="journal.html">My Journal</a></li>
-        </ul>
-      </nav>
+        <a id="logo" href="index.html"><img class="left" src="img/legdayLogo.png" alt="BeachBody logo" height="60"></a></div>
+          <ul>
+            <li id="navjournal"><a href="journal.html">My Journal</a></li>
+          </ul>
+        </nav>
     </header>
 
   <!-- main / form -->
+  <div class="lbar"></div>
     <main>
-      <form id="workoutSelection">
-        <fieldset>
-          <legend>Choose Your Workout</legend>
-          <input type="text" name="userName" placeholder="Your Name">
-          <ul>
-            <li><label for="time">Time</label></li>
-            <li><input type="radio" name="time" value="1" required>Less than 30mins</li>
-            <li><input type="radio" name="time" value="2">30 to 40 mins</li>
-            <li><input type="radio" name="time" value="3">More than 45 mins</li>
-          </ul>
-          <ul>
-            <li><label for="intensity">Intensity</label></li>
-            <li><input type="radio" name="intensity" value="1" required>Beginner</li>
-            <li><input type="radio" name="intensity" value="2">Intermediate</li>
-            <li><input type="radio" name="intensity" value="3">Advanced</li>
-            <li><input type="radio" name="intensity" value="4">Extreme</li>
-          </ul>
-          <select id="workoutStyle" name="style" required>
-            <option value="">Select Workout Style</option>
-            <option value="dance">Dance</option>
-            <option value="cardio">Cardio</option>
-            <option value="extreme">Extreme</option>
-            <option value="abs">Abs</option>
-            <option value="specialty">Specialized/Other</option>
-          </select>
-          <button type="submit" name="sendSelection">Submit Info</button>
-        </fieldset>
-      </form>
+      <div class="centerwrap">
+        <form id="workoutSelection">
+          <fieldset>
+            <h1><legend>Choose Your Workout</legend></h1>
+            <h2><input type="text" name="userName" placeholder="Your Name"></h2>
+            <p>
+              <ul>
+                <li><label for="time">Time</label></li>
+                <li><input type="radio" name="time" value="1" required>Less than 30mins</li>
+                <li><input type="radio" name="time" value="2">30 to 40 mins</li>
+                <li><input type="radio" name="time" value="3">More than 45 mins</li>
+              </ul>
+            <ul>
+              <li><label for="intensity">Intensity</label></li>
+              <li><input type="radio" name="intensity" value="1" required>Beginner</li>
+              <li><input type="radio" name="intensity" value="2">Intermediate</li>
+              <li><input type="radio" name="intensity" value="3">Advanced</li>
+              <li><input type="radio" name="intensity" value="4">Extreme</li>
+            </ul>
+            <select id="workoutStyle" name="style" required>
+              <option value="">Select Workout Style</option>
+              <option value="dance">Dance</option>
+              <option value="cardio">Cardio</option>
+              <option value="extreme">Extreme</option>
+              <option value="abs">Abs</option>
+              <option value="specialty">Specialized/Other</option>
+            </select>
+            </p>
+          </div>
+            <div class="midbar">
+              <button type="submit" name="sendSelection">Submit Info</button>
+            </div>
+          </fieldset>
+        </form>
+        <div class="midblock">
+
+          <h1>SWEAT</h1>
+          <h1>SMILE</h1>
+          <h1>RECURSE</h1>
+
+        </div>
     </main>
 
   <!-- footer -->
     <footer>
-
+      <div class="section group">
+        <div class="col span_3_of_12"></div>
+        <div class="col span_3_of_12">
+          <h2>ORDER NOW</h2>
+          <a href="https://www.beachbody.com/" target="_blank"><img class="left" src="img/legdayLogo.png" alt="BeachBody logo" height="60" title="Order Your Beachbody Program Now"></a></div>
+          <h3><a href="about.html">About Us</a></h3>
+          <div class="sm-container">
+            <ul class="social-media-list">
+              <li>
+                <a href="https://www.facebook.com/beachbody/" target="_blank"> <img src="img/fb.png" width="48" height="48" alt="Like Us on Facebook" title="Like Us on Facebook"></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/Beachbody" target="_blank"> <img src="img/twit.png" width="48" height="48" alt="Follow Us on Twitter" title="Follow Us on Twitter"></a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com/beachbody/" target="_blank"> <img src="img/pin.png" width="48" height="48" alt="Follow Us on Pinterest" title="Follow Us on Pinterest"></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/BeachbodyVideo" target="_blank"> <img src="img/yt.png" width="48" height="48" alt="Follow Us on YouTube" title="Follow Us on YouTube"></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/beachbody/" target="_blank"> <img src="img/instagram.png" width="48" height="48" alt="Follow Us on Instagram" title="Follow Us on Instagram"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col span_3_of_12"></div>
+      </div>
+      <div class="cbar">
+        <p>Copyright © 2017 Beachbody Finder. All Rights Reserved.</p>
+      </div>
     </footer>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
