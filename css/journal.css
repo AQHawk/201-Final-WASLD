@@ -38,17 +38,26 @@ fieldset label {
 }
 
 fieldset button {
-    border: none;
+    border: 3px #9fbfcc ridge;
     padding: 10px 30px;
     background: linear-gradient(#7cdbff, #064c63);
     font-family: Raleway;
-    color: white;
+    color: #a9e8ff;
     font-size: 1.4em;
     font-weight: bold;
-
+    text-shadow: 1px 1px 4px black;
+}
+fieldset button:hover {
+/*     border: 3px #5e8696 ridge; */
+    color: #d7f4ff;
+    border: 3px #6893a5 ridge;
+    background: linear-gradient(#a8e3f9, #043444);
+}
+fieldset button:active {
+    border: 3px #235569 ridge;
 }
 legend {
-    background: linear-gradient(#263c44, #2a434c);
+    background: linear-gradient(#284049, #2a434d);
     color: #4db2ed;
     text-shadow: 4px 3px 6px #060606;
     font-size: 40px;
@@ -76,12 +85,21 @@ form textarea {
     color: #abe7ff;
     text-shadow: 2px 1px 4px #131010;
     font-size: 20px;
-    right: 5%;
-    top: 0px;
+    position: absolute;
     padding: 10px 30px;
-    background: linear-gradient(#7cdbff, #064c63);
+    background: linear-gradient(#239fce, #003546);
     border: none;
     font-family: raleway;
+    text-decoration: none;
+    box-shadow: 2px 3px 20px #272626;
+}
+#changeWorkout:hover {
+    color: #52ceff;
+    background: linear-gradient(#33a9d6, #113c4a);
+}
+#changeWorkout:active {
+    color: #1b86ae;
+    background: linear-gradient(#1a84ab, #003546);
 }
 
 button:focus {

@@ -54,6 +54,8 @@ function submitJournal(event){
   new NewJournal(subject, entry);
   buildJournals(subject, entry);
   localStorage.journals = JSON.stringify(NewJournal.all);
+  event.target.subject.value = null;
+  event.target.entry.value = null;
 }
 
 function changeJournalHeader() {
