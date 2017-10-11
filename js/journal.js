@@ -80,8 +80,13 @@ function changeJournalHeader() {
 
 
 function deleteJournal(parent) {
-  console.log(parent.id);
   parent.remove();
+  NewJournal.all.splice(parent.id, 1);
+  for (var i = 0; i < (JSON.parse(localStorage.journals).length - 1); i ++) {
+    NewJournal.all[i].id = i;
+  }
+  localStorage.journals = JSON.stringify(NewJournal.all);
+  console.log(parent.id);
 }
 
 // +++++++++++++++++++++++++++++++++++++++++
