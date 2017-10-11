@@ -10,11 +10,17 @@ img {
   max-width: 100%;
 }
 
-header {
+#background {
   background-image: url("../img/future.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 47em;
+  background-position: 0  94px;
+  background-size: contain;
+  z-index: 0;
+}
+#background img {
+  visibility: hidden;
+  margin-top: 88px;
 }
 
 .midbar {
