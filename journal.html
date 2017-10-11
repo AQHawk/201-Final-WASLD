@@ -29,7 +29,7 @@
 <!-- main article -->
     <main>
       <section id="title">
-        <h1><span>Current Workout Plan</span></h1>
+        <h1><span id="selectedWorkout">Current Workout Plan</span></h1>
       </section>
 
 <!-- journal form -->
@@ -37,11 +37,11 @@
         <fieldset>
           <legend>Journal Entry</legend>
           <div class="changeBackground">
-            <button id="changeWorkout" type="button" name="changeYourWorkout">Change Workout Plan</button>
+            <a id="changeWorkout" href="inputForm.html" name="changeYourWorkout">Change Workout Plan</a>
           </div>
 
           <label for="journalHeader">Subject:</label>
-          <input id="subject" type="text" name="journalSubject" placeholder="Title of the journal" maxlength="50">
+          <input id="subject" type="text" name="journalSubject" placeholder="Title of the journal" maxlength="50" required>
           <textarea id="entry" type="text" name="journalEntryText" placeholder="Write about your workout" cols="100" rows="18"></textarea>
           <button id="submit" type="submit" name="submit">Submit Entry</button>
         </fieldset>
@@ -54,10 +54,9 @@
         <section id="journalEntriesGoHere">
 
         </section>
-
       </div>
     </main>
-    
+
 <!-- footer -->
     <footer>
 
@@ -66,35 +65,35 @@
       <div class="col span_3_of_12">
         <h2>ORDER NOW</h2>
         <a href="https://www.beachbody.com/" target="_blank"><img class="left" src="img/legdayLogo.png" alt="BeachBody logo" height="60" title="Order Your Beachbody Program Now"></a></div>
-      <div class="col span_3_of_12">
-        <h3><a href="about.html">About Us</a></h3>
-        <div class="sm-container">
-          <ul class="social-media-list">
-            <li>
-              <a href="https://www.facebook.com/beachbody/" target="_blank"> <img src="img/fb.png" width="48" height="48" alt="Like Us on Facebook" title="Like Us on Facebook"></a>
-            </li>
-            <li>
-              <a href="https://twitter.com/Beachbody" target="_blank"> <img src="img/twit.png" width="48" height="48" alt="Follow Us on Twitter" title="Follow Us on Twitter"></a>
-            </li>
-            <li>
-              <a href="https://www.pinterest.com/beachbody/" target="_blank"> <img src="img/pin.png" width="48" height="48" alt="Follow Us on Pinterest" title="Follow Us on Pinterest"></a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/user/BeachbodyVideo" target="_blank"> <img src="img/yt.png" width="48" height="48" alt="Follow Us on YouTube" title="Follow Us on YouTube"></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/beachbody/" target="_blank"> <img src="img/instagram.png" width="48" height="48" alt="Follow Us on Instagram" title="Follow Us on Instagram"></a>
-            </li>
-          </ul>
+        <div class="col span_3_of_12">
+          <h3><a href="about.html">About Us</a></h3>
+          <div class="sm-container">
+            <ul class="social-media-list">
+              <li>
+                <a href="https://www.facebook.com/beachbody/" target="_blank"> <img src="img/fb.png" width="48" height="48" alt="Like Us on Facebook" title="Like Us on Facebook"></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/Beachbody" target="_blank"> <img src="img/twit.png" width="48" height="48" alt="Follow Us on Twitter" title="Follow Us on Twitter"></a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com/beachbody/" target="_blank"> <img src="img/pin.png" width="48" height="48" alt="Follow Us on Pinterest" title="Follow Us on Pinterest"></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/BeachbodyVideo" target="_blank"> <img src="img/yt.png" width="48" height="48" alt="Follow Us on YouTube" title="Follow Us on YouTube"></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/beachbody/" target="_blank"> <img src="img/instagram.png" width="48" height="48" alt="Follow Us on Instagram" title="Follow Us on Instagram"></a>
+              </li>
+            </ul>
         </div>
       </div>
       <div class="col span_3_of_12"></div>
-    </div>
-    <div class="cbar">
-      <p>Copyright © 2017 Beachbody Finder. All Rights Reserved.</p>
-    </div>
+      </div>
+      <div class="cbar">
+        <p>Copyright © 2017 Beachbody Finder. All Rights Reserved.</p>
+      </div>
 
     </footer>
-    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/journal.js" type="text/javascript"></script>
   </body>
 </html>
