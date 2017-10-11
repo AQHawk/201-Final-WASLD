@@ -3,13 +3,17 @@
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ global variables
 // +++++++++++++++++++++++++++++++++++++++++
-var journal = document.getElementById('journalForm');
+var journalForm = document.getElementById('journalForm');
 var pastJournals = document.getElementById('journalEntriesGoHere');
+var idCounter = 0;
 NewJournal.all = [];
 
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ localStorage Check
 // +++++++++++++++++++++++++++++++++++++++++
+if (localStorage.journals) {
+  idCounter = (JSON.parse(localStorage.journals).length);
+}
 if (localStorage.journals){
   var journalParsed = JSON.parse(localStorage.journals);
   NewJournal.all = NewJournal.all.concat(journalParsed);
@@ -21,38 +25,49 @@ if (localStorage.workout) {
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ Constructor
 // +++++++++++++++++++++++++++++++++++++++++
-function NewJournal(subject, textArea){
+function NewJournal(subject, textArea, id){
   this.subject = subject;
   this.textArea = textArea;
-  NewJournal.all.unshift(this);
+  this.id = id;
+  NewJournal.all.push(this);
 }
 
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ functions
 // +++++++++++++++++++++++++++++++++++++++++
-function buildJournals(subject, textArea){
+function buildJournals(subject, textArea, i){
   var secEl = document.createElement('section');
   var header = document.createElement('h6');
   var pEl = document.createElement('p');
+  var delEl = document.createElement('a');
   header.textContent = (subject);
   pEl.textContent = (textArea);
+  delEl.textContent = 'img/yt.png';
+  secEl.setAttribute('id', i);
+  delEl.setAttribute('onclick', 'deleteJournal(this.parentElement)');
   secEl.appendChild(header);
   secEl.appendChild(pEl);
+  secEl.appendChild(delEl);
   pastJournals.insertBefore(secEl, pastJournals.childNodes[0]);
+  console.log(delEl.parentElement);
 }
 
 function constructJournals() {
-  for (var i = NewJournal.all.length - 1; i > - 1; i--){
-    buildJournals(NewJournal.all[i].subject, NewJournal.all[i].textArea);
+  for (var i = 0; i < NewJournal.all.length; i++){
+    buildJournals(NewJournal.all[i].subject, NewJournal.all[i].textArea, NewJournal.all[i].id);
   }
 }
 
 function submitJournal(event){
   event.preventDefault();
+  if (localStorage.journals) {
+    idCounter = (JSON.parse(localStorage.journals).length);
+  }
   var subject = event.target.subject.value;
   var entry = event.target.entry.value;
-  new NewJournal(subject, entry);
-  buildJournals(subject, entry);
+  console.log(idCounter);
+  new NewJournal(subject, entry, idCounter);
+  buildJournals(subject, entry, idCounter);
   localStorage.journals = JSON.stringify(NewJournal.all);
   event.target.subject.value = null;
   event.target.entry.value = null;
@@ -63,8 +78,19 @@ function changeJournalHeader() {
   title.textContent = (JSON.parse(localStorage.workout).name);
 }
 
+
+function deleteJournal(parent) {
+  parent.remove();
+  NewJournal.all.splice(parent.id, 1);
+  for (var i = 0; i < (JSON.parse(localStorage.journals).length - 1); i ++) {
+    NewJournal.all[i].id = i;
+  }
+  localStorage.journals = JSON.stringify(NewJournal.all);
+  console.log(parent.id);
+}
+
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ Listeners / Run on page load
 // +++++++++++++++++++++++++++++++++++++++++
-journal.addEventListener('submit', submitJournal);
+journalForm.addEventListener('submit', submitJournal);
 constructJournals();
