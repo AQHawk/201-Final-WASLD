@@ -34,8 +34,10 @@ function buildJournals(subject, textArea){
   var secEl = document.createElement('section');
   var header = document.createElement('h6');
   var pEl = document.createElement('p');
+  var delEl = document.createElement('button');
   header.textContent = (subject);
   pEl.textContent = (textArea);
+  secEl.id = 'test';
   secEl.appendChild(header);
   secEl.appendChild(pEl);
   pastJournals.insertBefore(secEl, pastJournals.childNodes[0]);
