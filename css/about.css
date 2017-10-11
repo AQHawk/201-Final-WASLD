@@ -30,7 +30,7 @@ body{
 }
 .topmenu #logo {
   float: left;
-  margin-left: 20px;
+  margin-left: 4em;
   padding-top: 2px;
 }
 
@@ -83,6 +83,7 @@ main article {
 
 #title {
   margin-top: 20px;
+  margin-bottom: 35px;
   text-align: center;
 }
 
@@ -198,11 +199,9 @@ footer ul li {
 .sm-container {
   width: auto;
   margin: auto;
-  padding-left: 1.3em;
 }
 .social-media-list {
   width: auto;
-  padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 7em;
 }

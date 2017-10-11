@@ -2,12 +2,8 @@
 
 var workoutSelection = document.getElementById('workoutSelection');
 Workouts.allWorkouts = [];
-Workouts.journals = [];
 
-if(localStorage.journals){
-  var journalParsed = JSON.parse(localStorage.journals);
-  Workouts.journals = Workouts.journals.concat(journalParsed);
-};
+
 
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ Constructor
@@ -20,44 +16,6 @@ function Workouts(name, commitment, intensity, style){
   Workouts.allWorkouts.push(this);
   this.score = 0;
 }
-
-function NewJournal(subject, textArea){
-  this.subject = subject;
-  this.textArea = textArea;
-  Workouts.journals.unshift(this);
-}
-
-var journal = document.getElementById('journalForm');
-journal.addEventListener('submit', submitJournal);
-var pastJournals = document.getElementById('journalEntriesGoHere');
-
-function buildJournals(subject, textArea){
-  var secEl = document.createElement('section');
-  var header = document.createElement('h6');
-  var pEl = document.createElement('p');
-  header.textContent = (subject);
-  pEl.textContent = (textArea);
-  secEl.appendChild(header);
-  secEl.appendChild(pEl);
-  pastJournals.insertBefore(secEl, pastJournals.childNodes[0]);
-
-}
-
-
-function submitJournal(event){
-  event.preventDefault();
-  var subject = event.target.subject.value;
-  var entry = event.target.entry.value;
-  new NewJournal(subject, entry);
-  buildJournals(subject, entry);
-  localStorage.journals = JSON.stringify(Workouts.journals);
-}
-
-for (var i = Workouts.journals.length - 1; i > - 1; i--){
-  buildJournals(Workouts.journals[i].subject, Workouts.journals[i].textArea);
-};
-
-
 
 Workouts.prototype.compare = function(){
   for (var i = 0; i < (Workouts.allWorkouts.length - 1); i++) {
