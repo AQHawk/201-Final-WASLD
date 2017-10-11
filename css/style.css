@@ -23,6 +23,19 @@ img {
   margin-top: 88px;
 }
 
+#inputresults {
+  background-image: url("../img/workout2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0  94px;
+  background-size: contain;
+  z-index: 0;
+}
+#inputresults img {
+  visibility: hidden;
+  margin-top: 88px;
+}
+
 .midbar {
   clear: both;
   padding: 1em 0;
@@ -270,11 +283,11 @@ footer ul li {
 .sm-container {
   width: auto;
   margin: auto;
-  padding-left: 1.3em;
+
 }
 .social-media-list {
   width: auto;
-  padding-left: 1em;
+  
   padding-right: 1em;
   padding-bottom: 7em;
 }
