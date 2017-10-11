@@ -3,8 +3,6 @@
 var workoutSelection = document.getElementById('workoutSelection');
 Workouts.allWorkouts = [];
 
-
-
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ Constructor
 // +++++++++++++++++++++++++++++++++++++++++
@@ -17,6 +15,7 @@ function Workouts(name, commitment, intensity, style){
   this.score = 0;
 }
 
+// COMPARATORATOR
 Workouts.prototype.compare = function(){
   for (var i = 0; i < (Workouts.allWorkouts.length - 1); i++) {
     if (Workouts.allWorkouts[i].commitment.includes(parseInt(Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)].commitment))){
@@ -31,7 +30,7 @@ Workouts.prototype.compare = function(){
   }
 };
 
-//turn user input into last object in allWorkouts array in order to compare it
+//Create the objects; turn user input into last object in allWorkouts array in order to compare it
 Workouts.prototype.userInput = function(event){
   event.preventDefault();
   var cleanWeek	= new Workouts('Clean Week', [2], [1], ['none']);
@@ -66,14 +65,15 @@ Workouts.prototype.userInput = function(event){
   var chaLean = new Workouts('ChaLEAN Extreme', [2], [3], ['tone', 'extreme']);
   var rockinBody = new Workouts('Rockin\' Body', [1, 2], [2], ['dance', 'tone']);
   var userWorkout = new Workouts('null', event.target.time.value, event.target.intensity.value, event.target.style.value);
+  // Compare the objects against the user input; sort objects according to 'score', place highest scoring object into localStorage.
   Workouts.prototype.compare();
-  // Workouts.allWorkouts.pop();
   Workouts.allWorkouts.sort(function (a, b) {
     return a.score - b.score;
   });
+  Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)].userName = event.target.userName.value;
   var selectedWorkout = Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)];
-  console.log(selectedWorkout);
   localStorage.workout = JSON.stringify(selectedWorkout);
+  window.location = 'outputForm.html';
 };
 
 workoutSelection.addEventListener('submit', Workouts.prototype.userInput);
