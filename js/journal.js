@@ -10,9 +10,12 @@ NewJournal.all = [];
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ localStorage Check
 // +++++++++++++++++++++++++++++++++++++++++
-if(localStorage.journals){
+if (localStorage.journals){
   var journalParsed = JSON.parse(localStorage.journals);
   NewJournal.all = NewJournal.all.concat(journalParsed);
+};
+if (localStorage.workout) {
+  changeJournalHeader();
 };
 
 // +++++++++++++++++++++++++++++++++++++++++
@@ -51,6 +54,11 @@ function submitJournal(event){
   new NewJournal(subject, entry);
   buildJournals(subject, entry);
   localStorage.journals = JSON.stringify(NewJournal.all);
+}
+
+function changeJournalHeader() {
+  var title = document.getElementById('selectedWorkout');
+  title.textContent = (JSON.parse(localStorage.workout).name);
 }
 
 // +++++++++++++++++++++++++++++++++++++++++
