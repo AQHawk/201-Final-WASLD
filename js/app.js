@@ -74,7 +74,6 @@ Workouts.prototype.userInput = function(event){
   var selectedWorkout = Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)];
   console.log(selectedWorkout);
   localStorage.workout = JSON.stringify(selectedWorkout);
-  //Next: Evaluate scores after comparing, put info regarding highest scoring object to localStorage, pass to results page, delete preventDefault above.
 };
 
 workoutSelection.addEventListener('submit', Workouts.prototype.userInput);
