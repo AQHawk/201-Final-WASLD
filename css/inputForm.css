@@ -10,17 +10,11 @@ img {
   max-width: 100%;
 }
 
-#background {
+header {
   background-image: url("../img/future.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 0  94px;
-  background-size: contain;
-  z-index: 0;
-}
-#background img {
-  visibility: hidden;
-  margin-top: 88px;
+  min-height: 47em;
 }
 
 .midbar {
@@ -151,21 +145,6 @@ main p {
   text-align: center;
 }
 
-main a {
-  color: #97d1ed;
-  font-size: 1.7em;
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
-  display:inline-block;
-  border: solid 1px #97d1ed;
-  border-radius: 30px;
-  text-align: center;
-  background: linear-gradient(#111111, #2b4650);
-  padding: .5em 1em .5em;
-  margin: 0 auto;
-  text-decoration: none;
-}
-
 main button {
   color: #97d1ed;
   font-size: 1.7em;
@@ -186,13 +165,6 @@ main a:hover {
   color: white;
   border: solid 1px #f7fcff;
 }
-
-main button:hover {
-  background: linear-gradient(#111111, #327994);
-  color: white;
-  border: solid 1px #f7fcff;
-}
-
 .clearit {
   clear: both;
 }
