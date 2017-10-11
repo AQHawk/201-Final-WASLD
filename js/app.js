@@ -27,9 +27,9 @@ function NewJournal(subject, textArea){
   Workouts.journals.unshift(this);
 }
 
-var journal = document.getElementById('journalForm');
-journal.addEventListener('submit', submitJournal);
-var pastJournals = document.getElementById('journalEntriesGoHere');
+// var journal = document.getElementById('journalForm');
+// journal.addEventListener('submit', submitJournal);
+// var pastJournals = document.getElementById('journalEntriesGoHere');
 
 function buildJournals(subject, textArea){
   var secEl = document.createElement('section');
@@ -113,6 +113,9 @@ Workouts.prototype.userInput = function(event){
   Workouts.allWorkouts.sort(function (a, b) {
     return a.score - b.score;
   });
+  var selectedWorkout = Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)];
+  console.log(selectedWorkout);
+  localStorage.workout = JSON.stringify(selectedWorkout);
   //Next: Evaluate scores after comparing, put info regarding highest scoring object to localStorage, pass to results page, delete preventDefault above.
 };
 
