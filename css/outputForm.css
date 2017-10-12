@@ -10,11 +10,81 @@ img {
   max-width: 100%;
 }
 
-header {
-  background-image: url("../img/future.jpg");
+#results section {
+    border: 2px ridge #adbac7;
+    padding: 40px;
+    background: linear-gradient(#141617, #2b454f);
+    min-width: 550px;
+    margin-bottom: 40px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px ridge #adbac7;
+      padding: 40px;
+      background: linear-gradient(#141617, #2b454f);
+      min-width: 550px;
+      min-height: 320px;
+      margin-bottom: 40px;
+
+}
+
+section h6 {
+    font-size: 2.3em;
+    color: white;
+    font-family: Roboto;
+    margin-bottom: .7em;
+}
+
+.wrapper img {
+  display: inline-block;
+  padding-bottom: 40px;
+  padding-right: 20px;
+  float: left;
+  width: 500px;
+  height: 250px;
+}
+
+.clearit {
+  clear: both;
+}
+
+.wrapper p {
+    font-size: 1.5em;
+    display: block;
+    color: #f5f5f5;
+    font-family: Raleway;
+    overflow-wrap: break-word;
+    line-height: 1.5em;
+    text-align: left;
+    padding: 20px;
+
+}
+
+main {
+  padding-top: 30px;
+  height: 100%;
+  background: linear-gradient(#2b4650, #111);
+}
+
+main h4 {
+    color: #97d1e7;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+#inputresults {
+  background-image: url("../img/workout2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 47em;
+  background-position: 0  94px;
+  background-size: contain;
+  z-index: 0;
+}
+#inputresults img {
+  visibility: hidden;
+  margin-top: 88px;
 }
 
 .midbar {
@@ -142,7 +212,22 @@ main p {
   font-size: 1.7em;
   margin: 0 auto;
   padding: 1em 1em 2em 1em;
+
+}
+
+main a {
+  color: #97d1ed;
+  font-size: 1.7em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  display:inline-block;
+  border: solid 1px #97d1ed;
+  border-radius: 30px;
   text-align: center;
+  background: linear-gradient(#111111, #2b4650);
+  padding: .5em 1em .5em;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
 main button {
@@ -165,6 +250,13 @@ main a:hover {
   color: white;
   border: solid 1px #f7fcff;
 }
+
+main button:hover {
+  background: linear-gradient(#111111, #327994);
+  color: white;
+  border: solid 1px #f7fcff;
+}
+
 .clearit {
   clear: both;
 }
@@ -242,11 +334,10 @@ footer ul li {
 .sm-container {
   width: auto;
   margin: auto;
-  padding-left: 1.3em;
+
 }
 .social-media-list {
   width: auto;
-  padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 7em;
 }
