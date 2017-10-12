@@ -6,13 +6,14 @@ Workouts.allWorkouts = [];
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ Constructor
 // +++++++++++++++++++++++++++++++++++++++++
-function Workouts(name, commitment, intensity, style){
+function Workouts(name, commitment, intensity, style, html){
   this.name = name;
   this.commitment = commitment;
   this.intensity = intensity;
   this.style = style;
-  Workouts.allWorkouts.push(this);
+  this.textImgForRendering = html;
   this.score = 0;
+  Workouts.allWorkouts.push(this);
 }
 
 // COMPARATORATOR
@@ -35,7 +36,7 @@ Workouts.prototype.userInput = function(event){
   event.preventDefault();
   var cleanWeek	= new Workouts('Clean Week', [2], [1], ['none']);
   var shiftShop = new Workouts('Shift Shop', [1, 2], [2], ['cardio', 'express']);
-  var youVTwo = new Workouts('YOUv2', [2], [1], ['dance', 'tone']);
+  var youVTwo = new Workouts('YOUv2', [2], [1], ['dance', 'tone'], '<b>IF THIS RENDERS IT WORKED!</B>');
   var yogaRetreat	= new Workouts('3 Week Yoga Retreat', [1], [1], ['specialty']);
   var coreDeForce	= new Workouts('Core De Force', [2], [3], ['extreme', 'cardio']);
   var countryHeat	= new Workouts('Country Heat', [2], [2], ['dance']);
@@ -73,7 +74,7 @@ Workouts.prototype.userInput = function(event){
   Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)].userName = event.target.userName.value;
   var selectedWorkout = Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)];
   localStorage.workout = JSON.stringify(selectedWorkout);
-  window.location = 'outputForm.html';
+  // window.location = 'outputForm.html';
 };
 
 workoutSelection.addEventListener('submit', Workouts.prototype.userInput);
