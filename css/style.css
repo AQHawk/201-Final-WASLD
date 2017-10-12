@@ -42,6 +42,7 @@ img {
   width: 100%;
   background-color: #111111;
   text-align: center;
+  margin-top: 1em;
 }
 
 .midblock {
@@ -147,14 +148,6 @@ main h2 {
   text-shadow: 2px 2px 5px #272727;
 }
 
-main h2 {
-  color: #000;
-  font-family: 'Lato', sans-serif;
-  text-align: center;
-  margin: 0 auto;
-  text-shadow: 2px 2px 5px #272727;
-}
-
 main p {
   color: #000;
   font-family: 'Lato', sans-serif;
@@ -170,12 +163,12 @@ main a {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   display:inline-block;
-  border: solid 1px #97d1ed;
+   border: solid 1px #97d1ed;
   border-radius: 30px;
   text-align: center;
   background: linear-gradient(#111111, #2b4650);
-  padding: .5em 1em .5em;
-  margin: 0 auto;
+   padding: .5em 1em .5em;
+  /* margin: 0 auto; */
   text-decoration: none;
 }
 
@@ -231,7 +224,7 @@ hr {
   border: 0;
   border-top: 1px solid #000;
   margin: 1em auto;
-  padding: 0;
+  padding-bottom: 1em;
   width: 26em;
 }
 
@@ -296,4 +289,75 @@ footer ul li {
   text-align: center;
   margin: 0 auto;
   padding-right: .7em;
+}
+
+#welcomeHeader h2 {
+  padding-bottom: .4em;
+}
+#journalEntriesGoHere {
+  /*max-height: 500px;*/
+  /*overflow-y: scroll;*/
+  /*margin-bottom: 3em;*/
+}
+#journalEntriesGoHere section {
+    position: relative;
+    border: 2px ridge #adbac7;
+    padding: 40px;
+    background: linear-gradient(#141617, #2b454f);
+    min-width: 550px;
+    margin-bottom: 40px;
+}
+#journalEntriesGoHere section a {
+    display: inline;
+    padding: 0px;
+    border: none;
+}
+#journalEntriesGoHere section a:hover {
+    border: none;
+}
+#journalEntriesGoHere section a img {
+    position: absolute;
+    top: 45px;
+    right: 35px;
+    width: 45px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    visibility: visible;
+}
+#journalEntriesGoHere section a img:hover {
+    content:url("../img/deleteHover.png");
+    cursor: pointer;
+    border: none;
+    display: inline;
+}
+
+#journalEntriesGoHere section h6 {
+    font-size: 2.3em;
+    color: white;
+    font-family: Roboto;
+    margin-bottom: .7em;
+    width: 94%;
+    display: inline-block;
+    overflow-wrap: break-word;
+}
+#journalEntriesGoHere section h5 {
+    position: absolute;
+    bottom: 5px;
+    right: 1%;
+    font-size: 25px;
+    color: #868686;
+    font-family: roboto, sans-serif;
+}
+
+#journalEntriesGoHere section p {
+    font-size: 1.5em;
+    color: #f5f5f5;
+    font-family: Raleway;
+    overflow-wrap: break-word;
+    line-height: 1.5em;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    white-space: pre-wrap;
 }
