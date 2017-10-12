@@ -197,10 +197,3 @@ button:focus {
     text-align: left;
     padding: 0 20px;
 }
-#results section {
-  border: 2px ridge #adbac7;
-  padding: 40px;
-  background: linear-gradient(#141617, #2b454f);
-  min-width: 550px;
-  margin-bottom: 40px;
-}
