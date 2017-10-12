@@ -163,7 +163,7 @@ button:focus {
     padding: 40px;
     background: linear-gradient(#141617, #2b454f);
     min-width: 550px;
-    min-height: 250px;
+    min-height: 190px;
     margin-bottom: 40px;
     margin-top: 20px;
 }
