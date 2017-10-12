@@ -57,7 +57,7 @@ fieldset button:active {
     border: 3px #235569 ridge;
 }
 legend {
-    background: linear-gradient(#284049, #2a434d);
+    background: linear-gradient(#24373e, #2a434d);
     color: #4db2ed;
     text-shadow: 4px 3px 6px #060606;
     font-size: 40px;
@@ -155,4 +155,41 @@ button:focus {
     overflow-wrap: break-word;
     line-height: 1.5em;
     white-space: pre-wrap;
+}
+#resultsWrap {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px ridge #adbac7;
+    padding: 40px;
+    background: linear-gradient(#141617, #2b454f);
+    min-width: 550px;
+    min-height: 250px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+#resultsWrap img {
+  display: inline-block;
+  padding-bottom: 40px;
+  padding-right: 20px;
+  float: left;
+  width: 400px;
+  height: 200px;
+
+}
+#resultsWrap p {
+    font-size: 1em;
+    display: block;
+    color: #f5f5f5;
+    font-family: Raleway;
+    overflow-wrap: break-word;
+    line-height: 1.5em;
+    text-align: left;
+    padding: 0 20px;
+}
+#results section {
+  border: 2px ridge #adbac7;
+  padding: 40px;
+  background: linear-gradient(#141617, #2b454f);
+  min-width: 550px;
+  margin-bottom: 40px;
 }

@@ -148,6 +148,8 @@ main article {
 
 .about img {
   border-radius: 200px;
+  width: 200px;
+  height: 200px;
   float: left;
 }
 

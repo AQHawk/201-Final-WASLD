@@ -19,6 +19,9 @@ if (localStorage.journals){
   NewJournal.all = NewJournal.all.concat(journalParsed);
 };
 if (localStorage.workout) {
+  var workoutChoice = JSON.parse(localStorage.workout);
+  var renderResults = workoutChoice.textImgForRendering;
+  document.getElementById('results').innerHTML = renderResults;
   changeJournalHeader();
 };
 
