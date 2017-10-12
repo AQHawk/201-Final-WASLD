@@ -76,7 +76,7 @@ Workouts.prototype.userInput = function(event){
     return a.score - b.score;
   });
   Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)].userName = event.target.userName.value;
-  var selectedWorkout = Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)];
+  var selectedWorkout = Workouts.allWorkouts.slice(-3);
   localStorage.workout = JSON.stringify(selectedWorkout);
   window.location = 'outputForm.html';
 };

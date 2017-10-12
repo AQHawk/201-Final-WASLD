@@ -8,7 +8,7 @@ if (localStorage.workout){
 
 function renderWorkout(){
   var renderResults = document.getElementById('results').innerHTML;
-  renderResults = workoutChoice.textImgForRendering;
+  renderResults = workoutChoice[0].textImgForRendering + workoutChoice[1].textImgForRendering + workoutChoice[2].textImgForRendering;
   document.getElementById('results').innerHTML = renderResults;
 }
 
