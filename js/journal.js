@@ -56,7 +56,7 @@ function buildJournals(subject, textArea, i, currentWorkout){
   editEl.setAttribute('onclick', 'editJournal(this.parentElement)');
   secEl.appendChild(header);
   secEl.appendChild(pEl);
-  // secEl.appendChild(delEl);
+  secEl.appendChild(delEl);
   secEl.appendChild(editEl);
   secEl.appendChild(workout);
   pastJournals.insertBefore(secEl, pastJournals.childNodes[0]);
@@ -100,13 +100,30 @@ function deleteJournal(parent) { // eslint-disable-line
   localStorage.journals = JSON.stringify(NewJournal.all);
   console.log(parent.id);
 }
-function editJournal(parent) {
+
+function editJournal(parent) { // eslint-disable-line
   var indexNum = parent.id;
   console.log('index number is: ' + indexNum);
   var subjectValue = JSON.parse(localStorage.journals)[indexNum].subject;
+  var textValue = JSON.parse(localStorage.journals)[indexNum].textArea;
+  console.log(textValue);
+  parent.innerHTML = '<form id="confirmationID' + indexNum + '" class="" action="#" method="post">  <label for="journalSubject">Subject: </label><input type="text" name="journalSubject" value="' + subjectValue + '" maxlength="50" required>  <textarea type="text" name="journalEntryText" cols="100" rows="18">' + textValue + '</textarea>  <button id="submit" type="submit" name="submit">Submit Entry</button>  </form>';
+  var confirm = document.getElementById('confirmationID' + indexNum);
+  confirm.addEventListener('submit', confirmJournal);
+}
 
-  console.log(subjectValue);
-  parent.innerHTML = '<form class="" action="#" method="post">  <label for="journalSubject">Subject: </label><input type="text" name="journalSubject" value="' + subjectValue + '" maxlength="50" required>  <textarea type="text" name="journalEntryText" placeholder="Yay it works!" cols="100" rows="18"></textarea>  <button id="submit" type="submit" name="submit" onclick="editJournal(this.parentElement)">Submit Entry</button>  </form>';
+function confirmJournal(event) {
+  event.preventDefault();
+  var index = (event.target.id).slice(14, 15);
+  console.log('event: ' + event.target.id);
+  var parsedStorage = JSON.parse(localStorage.journals);
+  var parsed = parsedStorage[index];
+  parsed.textArea = event.target.journalEntryText.value;
+  parsed.subject = event.target.journalSubject.value;
+  var parent = (event.target.parentElement);
+  parent.innerHTML = null;
+  parent.innerHTML = '<h6>' + parsed.subject + '</h6><p>' + parsed.textArea + '</p><a onclick="deleteJournal(this.parentElement)"><img class="delete" src="img/delete.png"></a><a onclick="editJournal(this.parentElement)"><img class="edit" src="img/deleteHover.png"></a><h5>' + parsed.workoutHeader + '</h5>';
+  localStorage.journals = JSON.stringify(parsedStorage);
 }
 
 // +++++++++++++++++++++++++++++++++++++++++
