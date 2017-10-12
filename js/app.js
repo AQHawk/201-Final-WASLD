@@ -79,7 +79,6 @@ Workouts.prototype.userInput = function(event){
   for (var i = 0; i < selectedWorkout.length; i++) {
     selectedWorkout[i].userName = event.target.userName.value;
     selectedWorkout[i].textImgForRendering = selectedWorkout[i].textImgForRendering.concat('<button id="submit' + [i] + '" name="sendSelection" type="submit">Select this workout!</button></section>');
-    selectedWorkout[i].userName = event.target.userName.value;
   }
   localStorage.workout = JSON.stringify(selectedWorkout);
   window.location = 'outputForm.html';
