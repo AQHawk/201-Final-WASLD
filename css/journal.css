@@ -47,7 +47,7 @@ fieldset button {
     font-weight: bold;
     text-shadow: 1px 1px 4px black;
 }
-fieldset button:hover {
+#journalForm button:hover {
 /*     border: 3px #5e8696 ridge; */
     color: #d7f4ff;
     border: 3px #6893a5 ridge;
@@ -119,13 +119,23 @@ button:focus {
     min-width: 550px;
     margin-bottom: 40px;
 }
-#journalEntriesGoHere section a img {
+#journalEntriesGoHere section a img.delete {
     position: absolute;
-    top: 45px;
-    right: 35px;
+    bottom: 50px;
+    right:4.3%;
     width: 45px;
 }
-#journalEntriesGoHere section a img:hover {
+#journalEntriesGoHere section a img.edit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+}
+#journalEntriesGoHere section a img.edit:hover {
+  content:url("../img/editHover.png");
+  cursor: pointer;
+}
+#journalEntriesGoHere section a img.delete:hover {
     content:url("../img/deleteHover.png");
     cursor: pointer;
 }
@@ -155,6 +165,7 @@ button:focus {
     overflow-wrap: break-word;
     line-height: 1.5em;
     white-space: pre-wrap;
+    width: 94%;
 }
 #resultsWrap {
     max-width: 800px;
@@ -185,11 +196,4 @@ button:focus {
     line-height: 1.5em;
     text-align: left;
     padding: 0 20px;
-}
-#results section {
-  border: 2px ridge #adbac7;
-  padding: 40px;
-  background: linear-gradient(#141617, #2b454f);
-  min-width: 550px;
-  margin-bottom: 40px;
 }

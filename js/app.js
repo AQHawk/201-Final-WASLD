@@ -75,10 +75,10 @@ Workouts.prototype.userInput = function(event){
   Workouts.allWorkouts.sort(function (a, b) {
     return a.score - b.score;
   });
-  Workouts.allWorkouts[(Workouts.allWorkouts.length - 1)].userName = event.target.userName.value;
   var selectedWorkout = Workouts.allWorkouts.slice(-3);
   for (var i = 0; i < selectedWorkout.length; i++) {
     selectedWorkout[i].textImgForRendering = selectedWorkout[i].textImgForRendering.concat('<button id="submit' + [i] + '" name="sendSelection" type="submit">Select this workout!</button></section>');
+    selectedWorkout[i].userName = event.target.userName.value;
   }
   localStorage.workout = JSON.stringify(selectedWorkout);
   window.location = 'outputForm.html';
