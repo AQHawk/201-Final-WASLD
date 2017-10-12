@@ -42,7 +42,7 @@ function buildJournals(subject, textArea, i){
   var delEl = document.createElement('a');
   header.textContent = (subject);
   pEl.textContent = (textArea);
-  delEl.textContent = 'img/yt.png';
+  delEl.innerHTML = '<img src="img/delete.png"/>';
   secEl.setAttribute('id', i);
   delEl.setAttribute('onclick', 'deleteJournal(this.parentElement)');
   secEl.appendChild(header);
@@ -77,7 +77,6 @@ function changeJournalHeader() {
   var title = document.getElementById('selectedWorkout');
   title.textContent = (JSON.parse(localStorage.workout).name);
 }
-
 
 function deleteJournal(parent) {
   parent.remove();
