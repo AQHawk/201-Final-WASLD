@@ -10,7 +10,7 @@ img {
   max-width: 100%;
 }
 
-#results {
+#results1, #results2, #results3 {
   position: relative;
 }
 
@@ -38,8 +38,15 @@ img {
 .displayedWorkout {
   clear: both;
   /*min-height: 16em;*/
-  height: 100%;
-  position: relative;
+
+  border: 2px ridge #adbac7;
+  padding: 40px;
+  background: linear-gradient(#141617, #2b454f);
+  min-width: 550px;
+  margin-bottom: 40px;
+  min-height: 16em;
+
+
 }
 
 section h6 {
@@ -222,6 +229,7 @@ main p {
   font-size: 1.7em;
   margin: 0 auto;
   padding: 1em 1em 2em 1em;
+  margin-bottom: 2em;
 
 }
 
@@ -251,11 +259,13 @@ main button {
   text-align: center;
   background: linear-gradient(#111111, #2b4650);
   padding: .5em 1em .5em;
-  /*position: fixed;
-  bottom: 0;
-  right: 0;*/
+  float: right;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 
   text-decoration: none;
+
 }
 
 main a:hover {
