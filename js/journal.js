@@ -18,13 +18,18 @@ if (localStorage.journals){
   var journalParsed = JSON.parse(localStorage.journals);
   NewJournal.all = NewJournal.all.concat(journalParsed);
 };
-if (!JSON.parse(localStorage.workout)[1]) {
-  var workoutChoice = JSON.parse(localStorage.workout);
-  var renderResults = workoutChoice.textImgForRendering;
-  document.getElementById('results').innerHTML = renderResults;
-  changeJournalHeader();
+if (localStorage.workout) {
+  if ((!JSON.parse(localStorage.workout)[1])) {
+    var workoutChoice = JSON.parse(localStorage.workout);
+    var renderResults = workoutChoice.textImgForRendering;
+    document.getElementById('results').innerHTML = renderResults;
+    changeJournalHeader();
+  } else {
+    document.getElementById('title').innerHTML = '<h1><span id="selectedWorkout">My Journals</span></h1>';
+  }
 } else {
   document.getElementById('title').innerHTML = '<h1><span id="selectedWorkout">My Journals</span></h1>';
+  
 }
 
 // +++++++++++++++++++++++++++++++++++++++++
