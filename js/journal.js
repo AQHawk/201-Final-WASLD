@@ -76,14 +76,14 @@ function submitJournal(event){
   if (localStorage.journals) {
     idCounter = (JSON.parse(localStorage.journals).length);
   }
-  var subject = event.target.subject.value;
-  var entry = event.target.entry.value;
+  var subject = event.target.journalSubject.value;
+  var entry = event.target.journalEntryText.value;
   console.log(idCounter);
   new NewJournal(subject, entry, idCounter, currentWorkout);
   buildJournals(subject, entry, idCounter, currentWorkout);
   localStorage.journals = JSON.stringify(NewJournal.all);
-  event.target.subject.value = null;
-  event.target.entry.value = null;
+  event.target.journalSubject.value = null;
+  event.target.journalEntryText.value = null;
 }
 
 function changeJournalHeader() {
