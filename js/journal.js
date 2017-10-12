@@ -50,7 +50,7 @@ function buildJournals(subject, textArea, i, currentWorkout){
   workout.textContent = (currentWorkout);
   pEl.textContent = (textArea);
   delEl.innerHTML = '<img class="delete" src="img/delete.png"/>';
-  editEl.innerHTML = '<img class="edit" src="img/deleteHover.png"/>';
+  editEl.innerHTML = '<img class="edit" src="img/edit.png"/>';
   secEl.setAttribute('id', i);
   delEl.setAttribute('onclick', 'deleteJournal(this.parentElement)');
   editEl.setAttribute('onclick', 'editJournal(this.parentElement)');
