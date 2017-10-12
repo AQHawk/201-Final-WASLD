@@ -7,10 +7,16 @@ if (localStorage.workout){
 };
 
 function renderWorkout(){
-  var renderResults = workoutChoice[2].textImgForRendering + workoutChoice[1].textImgForRendering + workoutChoice[0].textImgForRendering;
-  document.getElementById('results').innerHTML = renderResults;
+var renderResultsI2 = workoutChoice[2].textImgForRendering;
+var renderResultsI1 = workoutChoice[1].textImgForRendering;
+var renderResultsI0 = workoutChoice[0].textImgForRendering;
+document.getElementById('results1').innerHTML = renderResultsI2;
+document.getElementById('results2').innerHTML = renderResultsI1;
+document.getElementById('results3').innerHTML = renderResultsI0;
 }
 
+<<<<<<< HEAD
+=======
 function selectFinalWorkout0(){
   workoutChoice[0].textImgForRendering = workoutChoice[0].textImgForRendering.slice(0, -95);
   workoutChoice[0].textImgForRendering = workoutChoice[0].textImgForRendering.concat('</section>');
@@ -29,6 +35,7 @@ function selectFinalWorkout2(){
   localStorage.workout = JSON.stringify(workoutChoice[2]);
   window.location = 'journal.html';
 }
+>>>>>>> 4e91e2fcf1ab7a191a8e7510a28d8b007bb50cdc
 
 renderWorkout();
 var buttonChoice0 = document.getElementById('submit0');
