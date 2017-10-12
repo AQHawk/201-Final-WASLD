@@ -107,7 +107,7 @@ function editJournal(parent) { // eslint-disable-line
   var subjectValue = JSON.parse(localStorage.journals)[indexNum].subject;
   var textValue = JSON.parse(localStorage.journals)[indexNum].textArea;
   console.log(textValue);
-  parent.innerHTML = '<form id="confirmationID' + indexNum + '" class="" action="#" method="post">  <label for="journalSubject">Subject: </label><input type="text" name="journalSubject" value="' + subjectValue + '" maxlength="50" required>  <textarea type="text" name="journalEntryText" cols="100" rows="18">' + textValue + '</textarea>  <button id="submit" type="submit" name="submit">Submit Entry</button>  </form>';
+  parent.innerHTML = '<form id="confirmationID' + indexNum + '" class="form" method="post">  <label for="journalSubject">Subject: </label><input class="subject" type="text" name="journalSubject" value="' + subjectValue + '" maxlength="50" required>  <textarea class="text" type="text" name="journalEntryText" cols="100" rows="18">' + textValue + '</textarea>  <button id="submit" type="submit" name="submit">Submit Entry</button>  </form>';
   var confirm = document.getElementById('confirmationID' + indexNum);
   confirm.addEventListener('submit', confirmJournal);
 }
@@ -122,7 +122,7 @@ function confirmJournal(event) {
   parsed.subject = event.target.journalSubject.value;
   var parent = (event.target.parentElement);
   parent.innerHTML = null;
-  parent.innerHTML = '<h6>' + parsed.subject + '</h6><p>' + parsed.textArea + '</p><a onclick="deleteJournal(this.parentElement)"><img class="delete" src="img/delete.png"></a><a onclick="editJournal(this.parentElement)"><img class="edit" src="img/deleteHover.png"></a><h5>' + parsed.workoutHeader + '</h5>';
+  parent.innerHTML = '<h6>' + parsed.subject + '</h6><p>' + parsed.textArea + '</p><a onclick="deleteJournal(this.parentElement)"><img class="delete" src="img/delete.png"></a><a onclick="editJournal(this.parentElement)"><img class="edit" src="img/edit.png"></a><h5>' + parsed.workoutHeader + '</h5>';
   localStorage.journals = JSON.stringify(parsedStorage);
 }
 

@@ -7,13 +7,13 @@ main h4 {
     font-size: 40px;
     padding-bottom: 20px;
 }
-main #subject {
+.form .subject {
     font-size: 28px;
     height: 28px;
     box-shadow: 4px 4px 16px #060606;
     padding-left: 5px;
 }
-main #entry {
+.form .text {
     display: block;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -21,7 +21,7 @@ main #entry {
     width: 98%;
     font-size: 22px;
 }
-fieldset {
+.form fieldset {
     border: 4px ridge #adbac7;
     padding: 50px;
     padding-left: 60px;
@@ -29,7 +29,7 @@ fieldset {
     position: relative;
     min-width: 550px;
 }
-fieldset label {
+.form label {
     font-size: 32px;
     margin-right: 12px;
     color: #bbccd6;
@@ -37,7 +37,7 @@ fieldset label {
     font-family: rajdhani;
 }
 
-fieldset button {
+.form button {
     border: 3px #9fbfcc ridge;
     padding: 10px 30px;
     background: linear-gradient(#7cdbff, #064c63);
@@ -47,16 +47,16 @@ fieldset button {
     font-weight: bold;
     text-shadow: 1px 1px 4px black;
 }
-#journalForm button:hover {
+.form button:hover {
 /*     border: 3px #5e8696 ridge; */
     color: #d7f4ff;
     border: 3px #6893a5 ridge;
     background: linear-gradient(#a8e3f9, #043444);
 }
-fieldset button:active {
+.form button:active {
     border: 3px #235569 ridge;
 }
-legend {
+.form legend {
     background: linear-gradient(#24373e, #2a434d);
     color: #4db2ed;
     text-shadow: 4px 3px 6px #060606;
@@ -65,11 +65,11 @@ legend {
     padding: 5px 10px;
     font-family: lato;
 }
-form {
+.form {
     margin: 20px 10% 80px 10%;
 }
 
-form textarea {
+.form textarea {
     min-width:
 }
 .changeBackground {
