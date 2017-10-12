@@ -7,9 +7,14 @@ if (localStorage.workout){
 };
 
 function renderWorkout(){
-  var renderResults = workoutChoice[2].textImgForRendering + workoutChoice[1].textImgForRendering + workoutChoice[0].textImgForRendering;
-  document.getElementById('results').innerHTML = renderResults;
+var renderResultsI2 = workoutChoice[2].textImgForRendering;
+var renderResultsI1 = workoutChoice[1].textImgForRendering;
+var renderResultsI0 = workoutChoice[0].textImgForRendering;
+document.getElementById('results1').innerHTML = renderResultsI2;
+document.getElementById('results2').innerHTML = renderResultsI1;
+document.getElementById('results3').innerHTML = renderResultsI0;
 }
+
 
 renderWorkout();
 // add selected

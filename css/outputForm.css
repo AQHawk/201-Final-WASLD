@@ -10,12 +10,17 @@ img {
   max-width: 100%;
 }
 
+#results {
+  position: relative;
+}
+
 #results section {
     border: 2px ridge #adbac7;
     padding: 40px;
     background: linear-gradient(#141617, #2b454f);
     min-width: 550px;
     margin-bottom: 40px;
+    position: absolute;
 }
 
 .wrapper {
@@ -30,16 +35,23 @@ img {
 
 }
 
+.displayedWorkout {
+  clear: both;
+  /*min-height: 16em;*/
+  height: 100%;
+  position: relative;
+}
+
 section h6 {
-    font-size: 2.3em;
+    font-size: 1.7em;
     color: white;
-    font-family: Roboto;
+    font-family: 'Lato', sans-serif;
     margin-bottom: .7em;
 }
 
+
 .wrapper img {
   display: inline-block;
-  padding-bottom: 40px;
   padding-right: 20px;
   float: left;
   width: 500px;
@@ -71,6 +83,7 @@ main {
 main h4 {
     color: #97d1e7;
     font-size: 40px;
+    font-family: 'Raleway', sans-serif;
     padding-bottom: 20px;
 }
 
@@ -111,9 +124,6 @@ main h4 {
   font-size: 6em;
   padding: .5em 0;
 }
-
-
-
 
 .topmenu {
   top: 0;
@@ -241,7 +251,10 @@ main button {
   text-align: center;
   background: linear-gradient(#111111, #2b4650);
   padding: .5em 1em .5em;
-  margin: 0 auto;
+  /*position: fixed;
+  bottom: 0;
+  right: 0;*/
+
   text-decoration: none;
 }
 
