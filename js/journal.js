@@ -29,7 +29,6 @@ if (localStorage.workout) {
   }
 } else {
   document.getElementById('title').innerHTML = '<h1><span id="selectedWorkout">My Journals</span></h1>';
-  
 }
 
 // +++++++++++++++++++++++++++++++++++++++++
