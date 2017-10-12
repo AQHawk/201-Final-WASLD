@@ -112,11 +112,22 @@ button:focus {
 }
 
 #journalEntriesGoHere section {
+    position: relative;
     border: 2px ridge #adbac7;
     padding: 40px;
     background: linear-gradient(#141617, #2b454f);
     min-width: 550px;
     margin-bottom: 40px;
+}
+#journalEntriesGoHere section a img {
+    position: absolute;
+    top: 45px;
+    right: 35px;
+    width: 45px;
+}
+#journalEntriesGoHere section a img:hover {
+    content:url("../img/deleteHover.png");
+    cursor: pointer;
 }
 
 section h6 {
@@ -124,6 +135,9 @@ section h6 {
     color: white;
     font-family: Roboto;
     margin-bottom: .7em;
+    width: 96%;
+    display: inline-block;
+    overflow-wrap: break-word;
 }
 
 section p {
