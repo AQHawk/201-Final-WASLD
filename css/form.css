@@ -260,8 +260,8 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-    width: 55%;
-    box-shadow: 0 0 7px #97d1ed;
+    width: 50%;
+    box-shadow: 0 0 5px 3px #97d1ed;
 }
 
 input[type=radio] {
@@ -286,6 +286,7 @@ fieldset {
     color: white;
     padding-bottom: 30px;
     margin: 0 20px;
+
 }
 
 fieldest label {
