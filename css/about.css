@@ -146,8 +146,10 @@ main article {
   text-indent: 50px;
 }
 
-.about img {
+.photo {
   border-radius: 200px;
+  width: 200px;
+  height: 200px;
   float: left;
 }
 

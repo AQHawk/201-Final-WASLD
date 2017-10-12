@@ -9,12 +9,14 @@ NewJournal.all = [];
 if (localStorage.workout) {
   welcome.innerHTML = 'Hey ' + (JSON.parse(localStorage.workout).userName) + '! Welcome Back.';
 }
-if (JSON.parse(localStorage.journals)[0]) {
-  pastJournals.style.maxHeight = '500px';
-  pastJournals.style.overflowY = 'scroll';
-  var journalParsed = JSON.parse(localStorage.journals);
-  NewJournal.all = NewJournal.all.concat(journalParsed);
-  constructJournals();
+if (localStorage.journals) {
+  if (JSON.parse(localStorage.journals)[0]) {
+    pastJournals.style.maxHeight = '500px';
+    pastJournals.style.overflowY = 'scroll';
+    var journalParsed = JSON.parse(localStorage.journals);
+    NewJournal.all = NewJournal.all.concat(journalParsed);
+    constructJournals();
+  }
 }
 
 

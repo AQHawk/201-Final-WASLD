@@ -7,8 +7,7 @@ if (localStorage.workout){
 };
 
 function renderWorkout(){
-  var renderResults = document.getElementById('results').innerHTML;
-  renderResults = workoutChoice[2].textImgForRendering + workoutChoice[1].textImgForRendering + workoutChoice[0].textImgForRendering;
+  var renderResults = workoutChoice[2].textImgForRendering + workoutChoice[1].textImgForRendering + workoutChoice[0].textImgForRendering;
   document.getElementById('results').innerHTML = renderResults;
 }
 
