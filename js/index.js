@@ -1,26 +1,22 @@
 'use strict';
 
-// +++++++++++++++++++++++++++++++++++++++++
-// +++++++ global variables
-// +++++++++++++++++++++++++++++++++++++++++
-var journalForm = document.getElementById('journalForm');
+var welcome = document.getElementById('welcome');
+var welcomeHeader = document.getElementById('welcomeHeader');
 var pastJournals = document.getElementById('journalEntriesGoHere');
-var idCounter = 0;
 NewJournal.all = [];
 
-// +++++++++++++++++++++++++++++++++++++++++
-// +++++++ localStorage Check
-// +++++++++++++++++++++++++++++++++++++++++
-if (localStorage.journals) {
-  idCounter = (JSON.parse(localStorage.journals).length);
+
+if (localStorage.workout) {
+  welcome.innerHTML = 'Hey ' + (JSON.parse(localStorage.workout).userName) + '! Welcome Back.';
 }
-if (localStorage.journals){
+if (JSON.parse(localStorage.journals)[0]) {
+  pastJournals.style.maxHeight = '500px';
+  pastJournals.style.overflowY = 'scroll';
   var journalParsed = JSON.parse(localStorage.journals);
   NewJournal.all = NewJournal.all.concat(journalParsed);
-};
-if (localStorage.workout) {
-  changeJournalHeader();
-};
+  constructJournals();
+}
+
 
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ Constructor
@@ -57,31 +53,13 @@ function buildJournals(subject, textArea, i, currentWorkout){
 }
 
 function constructJournals() {
+  pastJournals.innerHTML = '';
   for (var i = 0; i < NewJournal.all.length; i++){
     buildJournals(NewJournal.all[i].subject, NewJournal.all[i].textArea, NewJournal.all[i].id, NewJournal.all[i].workoutHeader);
   }
-}
-
-function submitJournal(event){
-  event.preventDefault();
-  var currentWorkout = (JSON.parse(localStorage.workout).name);
-
-  if (localStorage.journals) {
-    idCounter = (JSON.parse(localStorage.journals).length);
-  }
-  var subject = event.target.subject.value;
-  var entry = event.target.entry.value;
-  console.log(idCounter);
-  new NewJournal(subject, entry, idCounter, currentWorkout);
-  buildJournals(subject, entry, idCounter, currentWorkout);
-  localStorage.journals = JSON.stringify(NewJournal.all);
-  event.target.subject.value = null;
-  event.target.entry.value = null;
-}
-
-function changeJournalHeader() {
-  var title = document.getElementById('selectedWorkout');
-  title.textContent = (JSON.parse(localStorage.workout).name);
+  var hereAre = document.createElement('h2');
+  hereAre.textContent = 'Here are your past journals';
+  welcomeHeader.insertBefore(hereAre, welcomeHeader.childNodes[2]);
 }
 
 function deleteJournal(parent) { // eslint-disable-line
@@ -93,9 +71,3 @@ function deleteJournal(parent) { // eslint-disable-line
   localStorage.journals = JSON.stringify(NewJournal.all);
   console.log(parent.id);
 }
-
-// +++++++++++++++++++++++++++++++++++++++++
-// +++++++ Listeners / Run on page load
-// +++++++++++++++++++++++++++++++++++++++++
-journalForm.addEventListener('submit', submitJournal);
-constructJournals();

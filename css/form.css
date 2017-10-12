@@ -42,7 +42,6 @@ img {
   width: 100%;
   background-color: #111111;
   text-align: center;
-  margin-top: 1em;
 }
 
 .midblock {
@@ -121,22 +120,23 @@ nav ul li a:active {
 
 /* selected link */
 a:active {
-  color: rgb(122, 171, 245);
+  color: rgb(75, 113, 138);
   font-weight: bold;
   text-decoration: none !important;
 }
 
 main {
-  background-color: #f5f5f5;
+  background: linear-gradient(#2b454f, #141617);
+
 }
 
 main h1 {
-  color: #000;
+  color: #97d1ed;
   font-family: 'Lato', sans-serif;
   font-size: 3em;
   padding: 1em 1em .6em 1em;
   text-align: center;
-  text-shadow: 2px 2px 5px #272727;
+  text-shadow: 2px 2px 5px #000;
 }
 main h2 {
   color: #000;
@@ -144,6 +144,14 @@ main h2 {
   font-size: 2.1em;
   text-align: center;
   padding: 0em 1em 1em 1em;
+  margin: 0 auto;
+  text-shadow: 2px 2px 5px #272727;
+}
+
+main h2 {
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
   margin: 0 auto;
   text-shadow: 2px 2px 5px #272727;
 }
@@ -163,12 +171,12 @@ main a {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   display:inline-block;
-   border: solid 1px #97d1ed;
+  border: solid 1px #97d1ed;
   border-radius: 30px;
   text-align: center;
   background: linear-gradient(#111111, #2b4650);
-   padding: .5em 1em .5em;
-  /* margin: 0 auto; */
+  padding: .5em 1em .5em;
+  margin: 0 auto;
   text-decoration: none;
 }
 
@@ -207,14 +215,12 @@ main button:hover {
   background-color: rgb(5, 31, 124);
   height: .2em;
   width: 100%;
+
 }
 
 .centerwrap {
     max-width: 1120px;
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
+    margin: 0 auto;
     position: relative;
   }
 
@@ -222,6 +228,7 @@ main button:hover {
     max-width: 700px;
     margin: 0 auto;
     position: relative;
+    padding: 30px;
   }
 
 hr {
@@ -230,10 +237,76 @@ hr {
   border: 0;
   border-top: 1px solid #000;
   margin: 1em auto;
-  padding-bottom: 1em;
+  padding: 0;
   width: 26em;
 }
 
+/*Form Styling*/
+input[type=text], select {
+    width: 40%;
+    padding: 7px 10px;
+    margin: 18px 0;
+    display: inline-block;
+    border: 2px solid #97d1ed;
+    border-radius: 7px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 50%;
+    box-shadow: 0 0 5px 3px #97d1ed;
+}
+
+input[type=radio] {
+    display: inline-block;
+}
+
+h5 {
+  text-align: left;
+  font-size: 1.6em;
+  font-family: 'Lato', sans-serif;
+  padding: .5em 8em;
+}
+
+h6 {
+  text-align: center;
+}
+
+fieldset {
+    border-radius: 5px;
+    background: linear-gradient(#141617, #2b454f);
+    border: 2px ridge #adbac7;
+    color: white;
+    padding-bottom: 30px;
+    margin: 0 20px;
+
+}
+
+fieldest label {
+  padding-top: 30px;
+}
+
+fieldset ul {
+  padding-left: 14em;
+
+}
+
+fieldset ul li {
+  font-size: 1.4em;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 5px;
+}
+
+/*select option:hover {
+   background-color: #97d1ed !important;
+}*/
 
 
 footer {
@@ -297,75 +370,4 @@ footer ul li {
   text-align: center;
   margin: 0 auto;
   padding-right: .7em;
-}
-
-#welcomeHeader h2 {
-  padding-bottom: .4em;
-}
-#journalEntriesGoHere {
-  /*max-height: 500px;*/
-  /*overflow-y: scroll;*/
-  /*margin-bottom: 3em;*/
-}
-#journalEntriesGoHere section {
-    position: relative;
-    border: 2px ridge #adbac7;
-    padding: 40px;
-    background: linear-gradient(#141617, #2b454f);
-    min-width: 550px;
-    margin-bottom: 40px;
-}
-#journalEntriesGoHere section a {
-    display: inline;
-    padding: 0px;
-    border: none;
-}
-#journalEntriesGoHere section a:hover {
-    border: none;
-}
-#journalEntriesGoHere section a img {
-    position: absolute;
-    top: 45px;
-    right: 35px;
-    width: 45px;
-    padding: 0px;
-    margin: 0px;
-    border: none;
-    visibility: visible;
-}
-#journalEntriesGoHere section a img:hover {
-    content:url("../img/deleteHover.png");
-    cursor: pointer;
-    border: none;
-    display: inline;
-}
-
-#journalEntriesGoHere section h6 {
-    font-size: 2.3em;
-    color: white;
-    font-family: Roboto;
-    margin-bottom: .7em;
-    width: 94%;
-    display: inline-block;
-    overflow-wrap: break-word;
-}
-#journalEntriesGoHere section h5 {
-    position: absolute;
-    bottom: 5px;
-    right: 1%;
-    font-size: 25px;
-    color: #868686;
-    font-family: roboto, sans-serif;
-}
-
-#journalEntriesGoHere section p {
-    font-size: 1.5em;
-    color: #f5f5f5;
-    font-family: Raleway;
-    overflow-wrap: break-word;
-    line-height: 1.5em;
-    margin: 0px;
-    padding: 0px;
-    text-align: left;
-    white-space: pre-wrap;
 }
