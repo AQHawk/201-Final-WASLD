@@ -38,7 +38,7 @@
       </section>
 
 <!-- journal form -->
-      <form id="journalForm">
+      <form id="journalForm" class="form">
         <fieldset>
           <legend>Journal Entry</legend>
           <div class="changeBackground">
@@ -46,8 +46,8 @@
           </div>
 
           <label for="journalHeader">Subject:</label>
-          <input id="subject" type="text" name="journalSubject" placeholder="Title of the journal" maxlength="50" required>
-          <textarea id="entry" type="text" name="journalEntryText" placeholder="Write about your workout" cols="100" rows="18"></textarea>
+          <input class="subject" type="text" name="journalSubject" placeholder="Title of the journal" maxlength="50" required>
+          <textarea class="text" type="text" name="journalEntryText" placeholder="Write about your workout" cols="100" rows="18"></textarea>
           <button id="submit" type="submit" name="submit">Submit Entry</button>
         </fieldset>
       </form>
