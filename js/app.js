@@ -5,7 +5,11 @@ var workoutSelection = document.getElementById('workoutSelection');
 Workouts.allWorkouts = [];
 
 if (localStorage.workout) {
-  userName.value = JSON.parse(localStorage.workout)[0].userName;
+  if (JSON.parse(localStorage.workout)[0]) {
+    userName.value = JSON.parse(localStorage.workout)[0].userName;
+  } else {
+    userName.value = JSON.parse(localStorage.workout).userName;
+  }
 }
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ Constructor
