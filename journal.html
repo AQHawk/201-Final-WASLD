@@ -65,6 +65,13 @@
 
 <!-- footer -->
     <footer>
+      <form class="" action="#" method="post">
+        <label for="journalSubject">Subject: </label>
+        <input type="text" name="journalSubject" placeholder="Title of the journal" maxlength="50" required>
+        <textarea type="text" name="journalEntryText" placeholder="Write about your workout" cols="100" rows="18"></textarea>
+        <button id="submit" type="submit" name="submit" onclick="deleteJournal(this.parentElement)">Submit Entry</button>
+        <!-- <button id="editJournal" type="button" name="button" onclick="editJournal(this.parentElement)">createTextTest</button> -->
+      </form>
 
       <div class="section group">
       <div class="col span_3_of_12"></div>

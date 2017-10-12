@@ -45,15 +45,19 @@ function buildJournals(subject, textArea, i, currentWorkout){
   var workout = document.createElement('h5');
   var pEl = document.createElement('p');
   var delEl = document.createElement('a');
+  var editEl = document.createElement('a');
   header.textContent = (subject);
   workout.textContent = (currentWorkout);
   pEl.textContent = (textArea);
-  delEl.innerHTML = '<img src="img/delete.png"/>';
+  delEl.innerHTML = '<img class="delete" src="img/delete.png"/>';
+  editEl.innerHTML = '<img class="edit" src="img/deleteHover.png"/>';
   secEl.setAttribute('id', i);
   delEl.setAttribute('onclick', 'deleteJournal(this.parentElement)');
+  editEl.setAttribute('onclick', 'editJournal(this.parentElement)');
   secEl.appendChild(header);
   secEl.appendChild(pEl);
-  secEl.appendChild(delEl);
+  // secEl.appendChild(delEl);
+  secEl.appendChild(editEl);
   secEl.appendChild(workout);
   pastJournals.insertBefore(secEl, pastJournals.childNodes[0]);
   console.log(delEl.parentElement);
@@ -95,6 +99,14 @@ function deleteJournal(parent) { // eslint-disable-line
   }
   localStorage.journals = JSON.stringify(NewJournal.all);
   console.log(parent.id);
+}
+function editJournal(parent) {
+  var indexNum = parent.id;
+  console.log('index number is: ' + indexNum);
+  var subjectValue = JSON.parse(localStorage.journals)[indexNum].subject;
+
+  console.log(subjectValue);
+  parent.innerHTML = '<form class="" action="#" method="post">  <label for="journalSubject">Subject: </label><input type="text" name="journalSubject" value="' + subjectValue + '" maxlength="50" required>  <textarea type="text" name="journalEntryText" placeholder="Yay it works!" cols="100" rows="18"></textarea>  <button id="submit" type="submit" name="submit" onclick="editJournal(this.parentElement)">Submit Entry</button>  </form>';
 }
 
 // +++++++++++++++++++++++++++++++++++++++++
