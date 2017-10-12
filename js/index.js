@@ -7,7 +7,7 @@ NewJournal.all = [];
 
 
 if (localStorage.workout) {
-  welcome.innerHTML = 'Hey ' + (JSON.parse(localStorage.workout).userName) + '! Welcome Back.';
+  welcome.innerHTML = 'Hey ' + (JSON.parse(localStorage.workout)[0].userName) + '! Welcome Back.';
 }
 if (localStorage.journals) {
   if (JSON.parse(localStorage.journals)[0]) {

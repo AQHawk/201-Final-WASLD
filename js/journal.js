@@ -18,12 +18,14 @@ if (localStorage.journals){
   var journalParsed = JSON.parse(localStorage.journals);
   NewJournal.all = NewJournal.all.concat(journalParsed);
 };
-if (localStorage.workout) {
+if (!JSON.parse(localStorage.workout)[1]) {
   var workoutChoice = JSON.parse(localStorage.workout);
   var renderResults = workoutChoice.textImgForRendering;
   document.getElementById('results').innerHTML = renderResults;
   changeJournalHeader();
-};
+} else {
+  document.getElementById('title').innerHTML = '<h1><span id="selectedWorkout">My Journals</span></h1>';
+}
 
 // +++++++++++++++++++++++++++++++++++++++++
 // +++++++ Constructor
@@ -71,8 +73,11 @@ function constructJournals() {
 
 function submitJournal(event){
   event.preventDefault();
-  var currentWorkout = (JSON.parse(localStorage.workout).name);
-
+  if (localStorage.workout) {
+    var currentWorkout = (JSON.parse(localStorage.workout).name);
+  } else {
+    currentWorkout = '';
+  }
   if (localStorage.journals) {
     idCounter = (JSON.parse(localStorage.journals).length);
   }
